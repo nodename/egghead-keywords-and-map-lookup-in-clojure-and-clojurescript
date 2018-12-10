@@ -1,0 +1,7 @@
+JavaScript		Clojure/Script
+
+Array			Vector
+[1, 2, 3]		[1 2 3]
+
+Object			Map
+{foo: "abc", moo: 10}	{:foo "abc" :moo 10}

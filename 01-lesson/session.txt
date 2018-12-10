@@ -1,0 +1,58 @@
+$ lumo
+Lumo 1.9.0
+ClojureScript 1.10.439
+Node.js v10.9.0
+ Docs: (doc function-name-here)
+       (find-doc "part-of-name-here")
+ Source: (source function-name-here)
+ Exit: Control+D or :cljs/quit or exit
+
+cljs.user=> 
+cljs.user=> (def foo "123")
+#'cljs.user/foo
+cljs.user=> foo
+"123"
+cljs.user=> (def :foo "abc")
+            ⬆
+a.indexOf is not a function at line 1 
+	 (new)
+	 Function.cljs.core.ex_info.cljs$core$IFn$_invoke$arity$3 (NO_SOURCE_FILE <embedded>:2044:72)
+	 Function.cljs.analyzer.error.cljs$core$IFn$_invoke$arity$3 (NO_SOURCE_FILE <embedded>:2680:92)
+	 Object.cljs.analyzer.analyze_seq_STAR__wrap (NO_SOURCE_FILE <embedded>:3318:201)
+	 Function.cljs.analyzer.analyze_seq.cljs$core$IFn$_invoke$arity$4 (NO_SOURCE_FILE <embedded>:3323:81)
+	 Object.cljs.analyzer.analyze_form (NO_SOURCE_FILE <embedded>:3360:213)
+	 Object.cljs.analyzer.analyze_STAR_ (NO_SOURCE_FILE <embedded>:3363:337)
+	 Function.cljs.analyzer.analyze.cljs$core$IFn$_invoke$arity$4 (NO_SOURCE_FILE <embedded>:3367:452)
+	 (NO_SOURCE_FILE <embedded>:6250:452)
+	 Function.z (NO_SOURCE_FILE <embedded>:6251:164)
+
+a.indexOf is not a function
+	 Function.cljs.core.symbol.cljs$core$IFn$_invoke$arity$1 (NO_SOURCE_FILE <embedded>:460:110)
+	 Function.cljs.analyzer.confirm_var_exists.cljs$core$IFn$_invoke$arity$4 (NO_SOURCE_FILE <embedded>:2695:257)
+	 (NO_SOURCE_FILE <embedded>:2697:114)
+	 Function.cljs.analyzer.resolve_var.cljs$core$IFn$_invoke$arity$3 (NO_SOURCE_FILE <embedded>:2779:383)
+	 Object.cljs.analyzer.var_ast (NO_SOURCE_FILE <embedded>:2836:294)
+	 (NO_SOURCE_FILE <embedded>:2937:405)
+	 cljs.core.MultiFn.cljs$core$IFn$_invoke$arity$5 (NO_SOURCE_FILE <embedded>:1993:420)
+	 Object.cljs.analyzer.analyze_seq_STAR_ (NO_SOURCE_FILE <embedded>:3317:182)
+	 Object.cljs.analyzer.analyze_seq_STAR__wrap (NO_SOURCE_FILE <embedded>:3318:83)
+	 Function.cljs.analyzer.analyze_seq.cljs$core$IFn$_invoke$arity$4 (NO_SOURCE_FILE <embedded>:3323:81)
+
+cljs.user=> 1
+1
+cljs.user=> "Ahoy!"
+"Ahoy!"
+cljs.user=> :foo
+:foo
+cljs.user=> (def m {:foo "bar"
+       #_=> :moo 10})
+#'cljs.user/m
+cljs.user=> (get m :foo)
+"bar"
+cljs.user=> (m :foo)
+"bar"
+cljs.user=> (:foo m)
+"bar"
+cljs.user=> exit
+$ 
+
